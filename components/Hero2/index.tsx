@@ -27,23 +27,6 @@ const Hero2 = () => {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 py-20 md:px-8">
-        {/* Shape 04 */}
-        <Image
-          width={335}
-          height={384}
-          src="/images/shape/shape-04.png"
-          alt="Shape 04"
-          className="absolute top-0 left-0 z-20 lg:left-10"
-        />
-
-        {/* Shape 05 */}
-        <Image
-          width={132}
-          height={132}
-          src="/images/shape/shape-05.png"
-          alt="Shape 05"
-          className="absolute bottom-0 right-0 z-20"
-        />
 
         <motion.div
           variants={{
@@ -90,7 +73,7 @@ const Hero2 = () => {
                 aria-label="get started button"
                 className="rounded-full bg-white px-7.5 py-2.5 text-black hover:bg-opacity-90 transition duration-300 ease-in-out"
               >
-                Get Started
+                Book a Flight
               </button>
             </div>
             <p className="text-white">

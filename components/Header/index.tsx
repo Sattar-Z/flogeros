@@ -104,7 +104,11 @@ const Header = () => {
           }`}
         >
           <nav>
-            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
+            <ul
+              className={`flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10 ${
+                stickyMenu ? "text-black dark:text-white" : "text-white"
+              }`}
+            >
               {menuData.map((menuItem, key) => (
                 <li key={key} className={menuItem.submenu && "group relative"}>
                   {menuItem.submenu ? (
@@ -129,7 +133,7 @@ const Header = () => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-primary">
+                          <li key={key} className="hover:text-primary text-black dark:text-white dark:hover:text-primary">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
