@@ -106,7 +106,7 @@ const Header = () => {
           <nav>
             <ul
               className={`flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10 ${
-                stickyMenu ? "text-black dark:text-white" : "text-white"
+                stickyMenu ? "text-black dark:text-white" : "text-black dark:text-white"
               }`}
             >
               {menuData.map((menuItem, key) => (
@@ -120,7 +120,11 @@ const Header = () => {
                         {menuItem.title}
                         <span>
                           <svg
-                            className="h-3 w-3 cursor-pointer fill-waterloo group-hover:fill-primary"
+                            className={`h-3 w-3 cursor-pointer group-hover:fill-primary ${
+                              stickyMenu
+                                ? "fill-black dark:fill-white"
+                                : "fill-black dark:fill-white"
+                            }`}
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
                           >
@@ -133,7 +137,10 @@ const Header = () => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-primary text-black dark:text-white dark:hover:text-primary">
+                          <li
+                            key={key}
+                            className="text-black hover:text-primary dark:text-white dark:hover:text-primary"
+                          >
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
